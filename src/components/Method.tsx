@@ -113,14 +113,20 @@ export const Method: React.FC = () => {
                 alt="Dra. Danielle Lima performance e estilo de vida fitness"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = SITE_DATA.images.athleteRemote;
+                }}
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-md border border-white aspect-[3/4] mt-6">
               <img
                 src={SITE_DATA.images.foodPlate}
-                alt="Plato equilibrado de refeição saudável e flexível"
+                alt="Prato equilibrado de refeição saudável e flexível"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = SITE_DATA.images.foodPlateRemote;
+                }}
               />
             </div>
           </div>
